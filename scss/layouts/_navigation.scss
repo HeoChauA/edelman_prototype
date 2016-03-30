@@ -1,0 +1,309 @@
+// Toggle Navigation
+.navbar-toggle {
+  background-color: transparent;
+  border: 0;
+  color: $link-color;
+  cursor: pointer;
+  display: block;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  text-align: center;
+  top: 35px;
+  width: 26px;
+  z-index: 1;
+
+  @include breakpoint(tablet) {
+    right: 31px;
+    top: 37px;
+  }
+
+  @include breakpoint(desktop) {
+    display: none !important;
+  }
+
+  span {
+    display: block;
+    height: 100%;
+    line-height: 23px;
+    text-align: center;
+    text-indent: -999em;
+    width: 100%;
+
+    &:before {
+      display: block;
+      float: left;
+      font-size: rem(30px);
+      height: 100%;
+      line-height: 23px;
+      text-indent: 0;
+      width: 100%;
+    }
+  }
+}
+
+// Main navigation
+#primary-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  li.menu-item {
+    border-top: 1px solid $bd-color;
+    list-style: none;
+    position: relative;
+
+    &.current-menu-item,
+    &.current-menu-parent {
+      > a {
+        color: $link-hover !important;
+      }
+    }
+
+    &.has-submenu {
+      > a {
+        margin-right: 40px;
+      }
+    }
+
+    a {
+      color: $link-color;
+      display: block;
+      font-size: rem(14px);
+      font-weight: $font-normal;
+      padding: 15px 0;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $link-hover;
+        text-decoration: none;
+      }
+    }
+
+    .caret {
+      cursor: pointer;
+      line-height: 23px;
+      padding: 14px 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+      width: 40px;
+
+      &:before {
+        color: $link-color;
+      }
+
+      &.active {
+        &:before {
+          content: "\f0d8";
+        }
+      }
+    }
+
+    ul.submenu {
+      display: none;
+      margin: 0 0 0 1em;
+      padding: 0;
+
+      li.menu-item {
+        a {
+          color: $link-color;
+          text-transform: none;
+
+          &:hover {
+            color: $link-hover;
+          }
+        }
+      }
+    }
+  }
+
+  > li.menu-item {
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    display: inline-block;
+
+    li.menu-item {
+      position: relative;
+
+      a {
+        color: $link-color;
+        font-size: rem(14px);
+        font-weight: $font-normal;
+        margin-right: 0 !important;
+        padding: 0 15px;
+
+        &:hover {
+          color: $link-hover;
+          text-decoration: none;
+        }
+      }
+
+      .caret {
+        display: none !important;
+      }
+
+      &.active {
+        > a {
+          color: $link-color;
+        }
+      }
+
+      &.has-submenu {
+        &:before {
+          bottom: 0;
+          content: "\f0d7";
+          font-family: FontAwesome;
+          line-height: rem(25px);
+          position: absolute;
+          right: 15px;
+          top: 0;
+          z-index: 4;
+        }
+
+        &:hover {
+          > a {
+            color: $link-hover !important;
+          }
+
+          &:before {
+            color: $link-hover;
+          }
+
+          > ul {
+            @include transition(all 0.5s ease);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        ul.submenu {
+          display: block !important;
+        }
+      }
+    }
+
+    > li.menu-item {
+      border: none !important;
+      float: left;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      > a {
+        text-transform: uppercase;
+        padding: 10px 15px;
+        margin-top: -9px;
+      }
+
+      &.has-submenu {
+        > a {
+          padding-right: 35px;
+        }
+
+        &:hover {
+          > a {
+            @include box-shadow(0 1px 5px #d5d5d5);
+            background-color: $bg-page;
+            position: relative;
+            z-index: 2;
+
+            &:before {
+              background-color: $bg-page;
+              bottom: -8px;
+              box-shadow: none;
+              content: "";
+              height: 11px;
+              left: 0;
+              position: absolute;
+              width: 100%;
+              z-index: 3;
+            }
+          }
+
+          > ul {
+            top: 100%;
+          }
+        }
+
+        ul.submenu {
+          li.menu-item {
+            a {
+              color: $dark;
+              font-weight: $font-normal;
+
+              &:hover {
+                color: $link-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ul.submenu {
+      @include box-shadow(0 1px 5px #d5d5d5);
+      background-color: $bg-page;
+      left: 0;
+      margin: 2px 0 0 0 !important;
+      min-width: 200px;
+      opacity: 0;
+      padding: 0;
+      position: absolute;
+      text-align: left;
+      top: 90%;
+      visibility: hidden;
+      z-index: 1;
+
+      li.menu-item {
+        border: none;
+        padding: 0 10px;
+
+        &:first-child {
+          a {
+            border-top: none;
+          }
+        }
+
+        a {
+          border-top: 1px solid $bd-color;
+          display: block;
+          padding: 10px 0;
+        }
+
+        &.has-submenu {
+          &:before {
+            content: "\f0da";
+            line-height: 38px;
+            right: 10px;
+          }
+
+          > a {
+            padding-right: 15px;
+          }
+
+          &:hover {
+            > ul {
+              left: 100%;
+            }
+          }
+        }
+      }
+
+      ul.submenu {
+        left: 90%;
+        margin: 0 !important;
+        top: 0;
+      }
+    }
+  }
+}

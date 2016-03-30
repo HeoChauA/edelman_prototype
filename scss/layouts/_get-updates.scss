@@ -1,0 +1,90 @@
+.get-updates {
+  background-color: $white;
+  padding-top: rem(80px);
+  padding-bottom: rem(86px);
+
+  h2 {
+    @include cinzel;
+    color: #054d7a;
+    font-size: rem(42px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  p {
+    @include ubuntu;
+    @include span(23 of 27);
+    margin-left: span(2 of 27) + gutter(27);
+    text-align: center;
+  }
+
+  &-form {
+
+    .nf-hp {
+      position: absolute;
+      right: -9999px;
+    }
+
+    input {
+      border: none;
+      height: rem(70px);
+      padding: rem(20px);
+      width: 100%;
+    }
+
+    .form__first-name,
+    .form__last-name,
+    .form__email {
+      input {
+        @include ubuntu;
+        background-color: $gray-f5;
+        border-bottom: 1px solid $gray-d5;
+        color: $gray-38;
+        font-size: rem(13px);
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .nf-error-msg {
+        color: $red;
+        font-size: 14px;
+        margin-top: 4px;
+        padding-left: 16px;
+      }
+
+      @include breakpoint(tablet) {
+        @include span(6 of 20);
+      }
+
+      @include breakpoint(desktop) {
+        @include span(8 of 26);
+      }
+    }
+
+    .form__submit {
+      @include breakpoint(tablet) {
+        @include span(last 2 of 20);
+      }
+
+      @include breakpoint(desktop) {
+        @include span(last 2 of 26);
+      }
+
+      input {
+        background-color: $blue;
+        color: $white;
+        @include fa-icon();
+
+        &[disabled] {
+          background-color: $gray;
+        }
+      }
+
+      .nf-field-submit-error {
+        display: none;
+      }
+
+    }
+  }
+}

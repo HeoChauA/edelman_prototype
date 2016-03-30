@@ -1,0 +1,74 @@
+/* ==========================================================================
+   SASS Base: Variables, mixins, etc.
+   ========================================================================== */
+
+$base-font-size: 16;
+
+$line-height: 1.4 !default;
+$font-color: #222 !default;
+
+$color-primary: #00e !default;
+
+$link-color: $color-primary;
+$link-hover-color: $color-primary;
+$link-visited-color: $color-primary;
+
+/*
+ * Easy conversion to em from pixels
+ */
+@function _em($target, $context: $base-font-size) {
+    @if $target == 0 { @return 0 }
+    @return $target / $context + 0em;
+}
+
+/*
+ * Replicate adobe tracking values in em
+ */
+@function _adobe_tracking_to_em($target) {
+    @if $target == 0 { @return 0 }
+    @return $target / 1000 + 0em;
+}
+
+/*
+ * Photoshop Text Shadow
+ * NOTE: $spread has no effect for text shadows
+ * https://gist.github.com/heygrady/1039282
+ */
+@mixin photoshop-text-shadow($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: #000) {
+    $angle: (180 - $angle) * pi() / 180;
+    $h-shadow: round(cos($angle) * $distance);
+    $v-shadow: round(sin($angle) * $distance);
+    $css-spread: $size * $spread/100;
+    $blur: ($size - $css-spread);
+    @include text-shadow($h-shadow $v-shadow $blur $color);
+}
+
+/*
+ * Using variation specific font names from the start to avoid IE8 issues
+ * http://help.typekit.com/customer/portal/articles/6855-Using-multiple-weights-and-styles
+ */
+@mixin font($weight, $style: normal) {
+    @if $weight == light {
+        @if $style == italic {
+            font-family: "your-fonts here", sans-serif;
+            font-style: italic;
+        } @else {
+            font-family: "your-fonts here", sans-serif;
+            font-style: normal;
+        }
+        font-weight: 300;
+    } @else if $weight == regular {
+        @if $style == italic {
+            font-family: "your-fonts here", sans-serif;
+            font-style: italic;
+        } @else {
+            font-family: "your-fonts here", sans-serif;
+            font-style: normal;
+        }
+        font-weight: 400;
+    } @else if $weight == bold {
+        font-family: "your-fonts here", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+}

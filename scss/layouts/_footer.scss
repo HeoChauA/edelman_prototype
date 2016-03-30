@@ -1,0 +1,49 @@
+#footer {
+  background-color: $gray-38;
+  color: $white;
+  font-size: rem(11px);
+  height: rem(50px);
+  line-height: rem(18px);
+  padding: 16px 0;
+  z-index: 9;
+
+
+  &.fix-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .site-info {
+    @include span(2 of 12);
+    white-space: nowrap;
+  }
+
+  .footer-menu {
+    text-align: right;
+    @include span(last 10 of 12);
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        padding-left: 16px;
+      }
+    }
+    a {
+      color: $white;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

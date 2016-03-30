@@ -1,0 +1,79 @@
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+  margin: 0;
+  outline: none !important;
+  padding: 0;
+}
+
+*:after,
+*:before {
+  content: "";
+}
+
+#wpadminbar {
+  position: fixed !important;
+}
+
+html, body {
+  background-color: $bg-page;
+  font-size: $base-font-size + 0px;
+  @include font(regular);
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  @include transition(left 0.5s ease);
+  @include ubuntu;
+  background-color: $white;
+  color: $text-main-color;
+  font-size: rem(18px);
+  font-weight: $font-normal;
+  left: 0;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    @include transition(opacity 1s);
+    opacity: 1;
+  }
+
+  &.show-menu:before {
+    @include transition(opacity 1s);
+    background-color: $dark;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &.hide-menu {
+    left: 0 !important;
+  }
+
+  @include breakpoint(desktop) {
+    left: 0 !important;
+
+    &:before {
+      background-color: transparent !important;
+      content: "";
+      height: 0 !important;
+      visibility: hidden;
+      width: 0 !important;
+      z-index: -1 !important;
+    }
+  }
+}
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+}

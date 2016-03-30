@@ -1,0 +1,23 @@
+.page {
+  &__title {
+    font-size: rem(100px);
+    @include cinzel();
+    color: #fff;
+    &__wrap {
+      text-align: center;
+      background: $blue-dark;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &__content {
+    &__container {
+      border-bottom: 1px solid #dcdfe0;
+      padding-bottom: rem(86px);
+    }
+  }
+}
+
+.post-type-page {
+  background: #fff;
+}

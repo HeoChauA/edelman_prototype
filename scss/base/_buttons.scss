@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Global button styles
+   ========================================================================== */
+$color-btn: $link-color;
+$bd-btn: $link-color;
+$bg-button: $white;
+$btn-bg-blue: $blue;
+$btn-bg-bluedark: darken($blue, 3%);
+
+
+.button {
+  @include border-radius(5px);
+  font-size: rem(14px);
+  background-color: $btn-bg-blue;
+  border: 1px solid $btn-bg-blue;
+  color: $white;
+  display: inline-block;
+  font-weight: 400;
+  padding: 13px 32px 14px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $white;
+  }
+
+  &--bg-white {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $color-btn;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: $color-btn;
+    }
+  }
+
+  &--bg-bluedark {
+    background-color: $btn-bg-bluedark;
+    border-color: $btn-bg-bluedark;
+  }
+
+  &--bg-trans {
+    background-color: transparent;
+    border: 1px solid $bd-btn;
+    color: $color-btn;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: $color-btn;
+    }
+  }
+
+  &--radius {
+    @include border-radius(100px);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,87 @@
+$blue-light: #8fd1e9;
+
+.banner {
+  background-color: $secondary-color;
+  max-height: rem(700px);
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
+  &-container {
+    .banner__content {
+      position: relative;
+      z-index: 2;
+      padding: 31.3% 0 rem(30);
+
+      @include breakpoint(tablet) {
+        padding: 31.3% 0 rem(70px);
+      }
+
+      @include breakpoint(desktop) {
+        padding: 31.3% 0 rem(83px);
+      }
+    }
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint(desktop) {
+      background-position: rem(-434px -407px);
+      background-size: auto 170%;
+    }
+  }
+
+  &__heading {
+    color: $white;
+    font-size: rem(37px);
+    line-height: rem(44px);
+    margin: rem(0 0 10px 0);
+
+    @include breakpoint(tablet) {
+      font-size: rem(80px);
+      line-height: rem(64px);
+      margin: rem(0 0 15px 0);
+    }
+
+    @include breakpoint(desktop) {
+      font-size: rem(100px);
+      line-height: rem(80px);
+      margin: 0 15% rem(19px) 0;
+    }
+  }
+
+  &__subheading {
+    @include ubuntu();
+    color: $blue-light;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    font-size: rem(26px);
+    letter-spacing: 6px;
+    margin: 0;
+
+    @include breakpoint(tablet) {
+      font-size: rem(32px);
+      letter-spacing: 7px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: rem(40px);
+      letter-spacing: 8.5px;
+      margin-left: -4px;
+    }
+  }
+}

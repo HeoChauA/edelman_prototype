@@ -1,0 +1,31 @@
+// TYPOGRAPHY
+// Define all typographic styles in this file.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-normal;
+}
+
+h2 {
+  @include cinzel();
+  font-size: rem(40px);
+  color: $blue-dark;
+}
+
+a {
+  color: $link-color;
+  outline: none !important;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+p {
+  margin-bottom: rem(20px);
+}

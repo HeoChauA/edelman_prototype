@@ -1,0 +1,52 @@
+.modal {
+  &__disclaimer {
+    overflow: scroll;
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+    padding: rem(60px) rem(60px) 0;
+    max-height: 65%;
+    @include breakpoint(tablet) {
+      max-height: 70%;
+    }
+    @include breakpoint(superdesktop) {
+      max-height: 75%;
+    }
+  }
+  &__confirm {
+    text-align: center;
+  }
+  &__title {
+    @include cinzel();
+    font-size: rem(50px);
+  }
+}
+.alertify {
+  .alert> *,
+  .dialog> * {
+    max-width: 75%;
+    width: auto;
+    padding: 0;
+  }
+  .dialog {
+    >div {
+      border-radius: rem(10px);
+    }
+    nav {
+      text-align: center;
+      button:not(.btn):not(.pure-button):not(.md-button):not(.mdl-button) {
+        @extend .button;
+        @extend .button--radius;
+        @include ubuntu();
+        font-weight: bold;
+        font-size: rem(16px);
+        background-color: #75b1c7;
+        border-color: #75b1c7;
+        margin: 0 0 rem(20px);
+        transition: background 0.2s;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

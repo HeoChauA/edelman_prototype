@@ -1,0 +1,27 @@
+// VARIABLES
+
+// Width for layout
+$container: 1208px;
+
+// Breakpoints
+$desktop: $container;
+$tablet-landscape: 1024px;
+$tablet: 768px;
+$mobile: 480px;
+
+// Grid variables
+$container-margin: 10px;
+
+$column-mobile: 4;
+$column-tablet: 8;
+$column-desktop: 12;
+
+// Font size variables
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 400;
+$font-bold: 700;
+$font-ultra-bold: 900;

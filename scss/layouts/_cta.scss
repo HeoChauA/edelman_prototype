@@ -1,0 +1,63 @@
+.cta {
+  background-color: $bd-color;
+  overflow: hidden;
+  padding: rem(40px 11px 50px 0);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    padding: rem(60px 11px 70px 0);
+  }
+
+  @include breakpoint(desktop) {
+    padding: rem(84px 11px 74px 0);
+  }
+
+  &__background {
+    @include cinzel;
+    bottom: rem(-40px);
+    color: $bg-text;
+    font-size: rem(300px);
+    left: 0;
+    letter-spacing: 0px;
+    line-height: rem(254px);
+    position: absolute;
+    right: 0;
+    text-indent: rem(-58px);
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading {
+    padding: 0 10%;
+  }
+
+  &__subheading {
+    padding: 0 5%;
+  }
+
+  &__link {
+    margin-bottom: rem(16px);
+    @include span(1 of 1);
+    @include breakpoint(tablet) {
+      @include span(10 of 20);
+    }
+    &:nth-child(2n) {
+      margin-bottom: 0;
+      @include breakpoint(tablet) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__button {
+    font-size: rem(16px);
+    padding: rem(17px 38px);
+  }
+}

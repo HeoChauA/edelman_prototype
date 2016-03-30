@@ -1,0 +1,93 @@
+.header-container {
+  @extend %clearfix;
+  padding: 10px 0 14px;
+}
+
+.branding {
+  max-width: 100%;
+
+  @include breakpoint(desktop) {
+    display: inline-block;
+    padding: 4px 0;
+    vertical-align: middle;
+    width: 30%;
+  }
+
+  .site-title {
+    @extend .visuallyhidden;
+  }
+}
+
+.site-image {
+  > a {
+    display: block;
+    line-height: 0;
+  }
+}
+
+// Navigation && Serch form
+.branding-bottom {
+  @include transition(left 0.5s ease);
+  background-color: $bg-page;
+  bottom: 0;
+  height: 100%;
+  left: 100%;
+  overflow-y: auto;
+  padding: rem(10px 15px);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  .box-search {
+    padding: 10px 0;
+  }
+
+  @include breakpoint(desktop) {
+    background-color: transparent;
+    display: inline-block !important;
+    float: right;
+    left: 0 !important;
+    overflow: visible;
+    padding: 0 15px;
+    position: static;
+    right: 0;
+    text-align: right;
+    top: 0;
+    vertical-align: middle;
+    width: 65% !important;
+  }
+}
+
+.admin-bar {
+  .branding-bottom {
+    top: rem(46px);
+
+    @include breakpoint(782px) {
+      top: rem(32px);
+    }
+  }
+}
+
+.main-navigation,
+.get-update {
+  @include breakpoint(desktop) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.get-update {
+  display: block;
+}
+
+@include breakpoint(desktop) {
+  .main-navigation {
+    margin-right: 39px;
+  }
+
+  .get-update {
+    display: inline-block;
+    padding: 8px 23px;
+    margin-top: 13px;
+  }
+}
