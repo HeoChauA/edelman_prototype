@@ -20,6 +20,7 @@
   .site-info {
     @include span(2 of 12);
     white-space: nowrap;
+    text-transform: uppercase;
   }
 
   .footer-menu {

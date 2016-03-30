@@ -1,52 +1,114 @@
-.modal {
-  &__disclaimer {
-    overflow: scroll;
-    text-align: left;
-    border-bottom: 1px solid #aaa;
-    padding: rem(60px) rem(60px) 0;
-    max-height: 65%;
-    @include breakpoint(tablet) {
-      max-height: 70%;
-    }
-    @include breakpoint(superdesktop) {
-      max-height: 75%;
-    }
-  }
-  &__confirm {
-    text-align: center;
-  }
-  &__title {
-    @include cinzel();
-    font-size: rem(50px);
-  }
-}
 .alertify {
-  .alert> *,
-  .dialog> * {
-    max-width: 75%;
-    width: auto;
+  .alert > *,
+  .dialog > * {
+    max-width: none;
     padding: 0;
+    width: auto;
   }
+
   .dialog {
-    >div {
+    margin-top: 3.7%;
+    right: 6px;
+
+    > div {
       border-radius: rem(10px);
+      max-height: rem(530px);
+      max-width: 73.5%;
+      overflow: hidden;
+      padding-top: rem(25px);
+
+      @include breakpoint(desktop) {
+        padding-top: rem(47px);
+      }
     }
+
+    p:empty {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
     nav {
+      border-top: 1px solid $bd-color;
+      padding: rem(10px 20px);
       text-align: center;
+
+      @include breakpoint(desktop) {
+        padding: rem(20px 56px);
+      }
+
       button:not(.btn):not(.pure-button):not(.md-button):not(.mdl-button) {
         @extend .button;
         @extend .button--radius;
-        @include ubuntu();
-        font-weight: bold;
+        background-color: $blue-light;
+        border-color: $blue-light;
+        font-family: inherit;
         font-size: rem(16px);
-        background-color: #75b1c7;
-        border-color: #75b1c7;
+        font-weight: bold;
         margin: 0 0 rem(20px);
+        padding: rem(5px 10px);
         transition: background 0.2s;
+        width: 100%;
+
         &:hover {
-          border-color: transparent;
+          background-color: $blue-dark;
+          border-color: $blue-dark;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: rem(16px);
+          padding: rem(11px 51px);
+          width: auto;
         }
       }
+    }
+  }
+}
+
+.modal {
+  &__disclaimer {
+    margin-bottom: rem(25px);
+    max-height: 54%;
+    overflow-y: auto;
+    padding: rem(0 20px);
+    text-align: left;
+
+    p {
+      line-height: rem(29px);
+      margin: rem(0 0 3px 0);
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: rem(47px);
+      padding: rem(0 56px);
+
+      p {
+        line-height: rem(20px);
+      }
+    }
+  }
+
+  &__confirm {
+    margin: rem(0 0 10px);
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      margin: rem(0 0 40px);
+    }
+  }
+
+  &__title {
+    @extend %title-big;
+    font-size: rem(25px);
+    text-transform: uppercase;
+
+    @include breakpoint(desktop) {
+      font-size: rem(35px);
+    }
+
+    @include breakpoint(desktop) {
+      font-size: rem(44px);
+      letter-spacing: rem(2px);
+      margin-bottom: rem(17px);
     }
   }
 }

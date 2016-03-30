@@ -7,6 +7,10 @@
          "link":"index.html"
       },
       {
+         "name":"Home",
+         "link":"home.html"
+      },
+      {
          "name":"Styleguide",
          "link":"styleguide.html"
       }

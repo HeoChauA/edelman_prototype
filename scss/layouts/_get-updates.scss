@@ -1,90 +1,183 @@
 .get-updates {
   background-color: $white;
-  padding-top: rem(80px);
-  padding-bottom: rem(86px);
+  padding-bottom: rem(19px);
+  padding-top: rem(38px);
 
-  h2 {
-    @include cinzel;
-    color: #054d7a;
-    font-size: rem(42px);
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0;
+  @include breakpoint(desktop) {
+    padding-bottom: rem(9px);
   }
-  p {
-    @include ubuntu;
-    @include span(23 of 27);
-    margin-left: span(2 of 27) + gutter(27);
-    text-align: center;
+
+  .form {
+    &__title {
+      font-size: rem(30px);
+      letter-spacing: rem(2px);
+      text-align: center;
+      text-transform: uppercase;
+
+      @include breakpoint(tablet) {
+        font-size: rem(40px);
+      }
+
+      @include breakpoint(desktop) {
+        font-size: rem(44px);
+        margin-bottom: rem(26px);
+      }
+    }
+
+    &__description {
+      line-height: rem(30px);
+      margin-bottom: rem(49px);
+      padding: 0 7.3%;
+      text-align: center;
+    }
+
+    &__fields {
+      padding-left: rem(8px);
+    }
   }
 
   &-form {
+    padding-bottom: rem(110px);
+    position: relative;
 
     .nf-hp {
+      height: 0;
       position: absolute;
       right: -9999px;
+      visibility: hidden;
     }
 
-    input {
-      border: none;
-      height: rem(70px);
-      padding: rem(20px);
-      width: 100%;
+    > .nf-fields {
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
     }
 
-    .form__first-name,
-    .form__last-name,
-    .form__email {
-      input {
-        @include ubuntu;
-        background-color: $gray-f5;
-        border-bottom: 1px solid $gray-d5;
-        color: $gray-38;
-        font-size: rem(13px);
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-      .nf-error-msg {
-        color: $red;
-        font-size: 14px;
-        margin-top: 4px;
-        padding-left: 16px;
-      }
-
-      @include breakpoint(tablet) {
-        @include span(6 of 20);
-      }
-
-      @include breakpoint(desktop) {
-        @include span(8 of 26);
-      }
+    @include breakpoint(desktop) {
+      padding-bottom: rem(10px);
+      padding-right: rem(92px);
     }
 
-    .form__submit {
-      @include breakpoint(tablet) {
-        @include span(last 2 of 20);
-      }
+    nf-fields-wrap {
+      > div {
+        display: block;
+        line-height: 0;
+        margin-bottom: rem(40px);
+        position: relative;
+        width: 100%;
 
-      @include breakpoint(desktop) {
-        @include span(last 2 of 26);
-      }
+        &:last-of-type {
+          position: static;
+        }
 
-      input {
-        background-color: $blue;
-        color: $white;
-        @include fa-icon();
+        > .nf-field {
+          padding: 0;
+        }
 
-        &[disabled] {
-          background-color: $gray;
+        .nf-error-wrap {
+          @include transition(all 0.5s);
+          line-height: $base-line-height;
+          opacity: 0;
+          position: absolute;
+          top: 80%;
+          z-index: 9;
+        }
+
+        .field-wrap.nf-error {
+          .nf-error-wrap {
+            opacity: 1;
+            top: 100%;
+          }
+        }
+
+        @include breakpoint(tablet) {
+
+        }
+
+        @include breakpoint(desktop) {
+          display: inline-block;
+          margin-bottom: rem(10px);
+          margin-left: rem(21px);
+          width: rem(349px);
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+
+          .field-wrap.nf-error {
+            .nf-error-wrap {
+              top: 85%;
+            }
+          }
         }
       }
+    }
 
-      .nf-field-submit-error {
-        display: none;
+    .field-wrap  {
+      input[type*="email"],
+      input[type*="text"] {
+        background-color: $bg-page;
+        border-color: $bd-form-color;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        color: $text-main-color;
+        font-size: rem(14px);
+        font-weight: 700;
+        line-height: $base-line-height;
+        padding: rem(26px 19px 23px);
+        text-transform: uppercase;
       }
+    }
 
+    .form {
+      &__submit {
+        &:before {
+          background-color: $prymary-color;
+          color: $white;
+          content: "\f00c";
+          font-family: 'fontawesome';
+          line-height: rem(70px);
+          text-align: center;
+        }
+
+        input[type*="button"] {
+          @extend .button;
+          @include border-radius(0);
+          background-color: transparent;
+          border: none;
+          padding: 0;
+        }
+
+        &:before,
+        input[type*="button"] {
+          height: rem(70px);
+          position: absolute;
+          left: 0;
+          bottom: rem(40px);
+          width: 100%;
+        }
+
+        @include breakpoint(desktop) {
+          &:before,
+          input[type*="button"] {
+            left: auto;
+            margin-right: rem(12px);
+            right: 0;
+            top: 0;
+            bottom: auto;
+            width: rem(80px);
+          }
+        }
+
+        .nf-field-submit-error {
+          bottom: 0;
+          left: 0;
+          line-height: $base-line-height;
+          position: absolute;
+          right: 0;
+          text-align: center;
+        }
+      }
     }
   }
 }

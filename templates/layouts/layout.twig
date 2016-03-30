@@ -10,16 +10,22 @@
     {% endblock %}
   </head>
   <body>
+    <div class="page-wrapper">
+      {% block header %}
+        {% include 'header.twig' %}
+      {% endblock %}
 
-    {% block header %}
-      {% include 'navigation.twig' %}
-      <h1>{% block title %}{% endblock %}</h1>
-    {% endblock %}
-
-    {% block content %}{% endblock %}
+      {% block content %}
+        <section role="main" class="content-wrapper">
+          <div class="wrapper ">
+            <h1>{% block title %}{% endblock %}</h1>
+          </div>
+        </section>
+      {% endblock %}
+    </div>
 
     {% block footer %}
-      <footer>This is a footer</footer>
+      {% include 'footer.twig' %}
     {% endblock %}
 
     {% include "../blocks/index-links.twig" %}
@@ -28,8 +34,10 @@
       <script src="js/lib/media.match.min.js"></script>
       <script src="js/lib/enquire.min.js"></script>
       <script src="js/lib/jquery.min.js"></script>
-      <script src="js/lib/chosen.jquery.min.js"></script>
-      <script src="js/script.js"></script>
+      <script type='text/javascript' src='js/alertify.js'></script>
+      <script type='text/javascript' src='js/wrap-scripts.js'></script>
+      <script type='text/javascript' src='js/skip-link-focus-fix.js'></script>
+      <script type='text/javascript' src='js/dropdown.js'></script>
     {% endblock %}
   </body>
 </html>

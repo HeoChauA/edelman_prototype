@@ -30,15 +30,61 @@
 </head>
 
 <body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="header-container container">
+        <div class="branding">
+          <div class="site-image">
+            <a href="http://ashford.local">
+              <img alt="Ashford Prime Facts" class="site-logo" src="logo.png">
+            </a>
+          </div>
+          <p class="site-title">
+            <a href="http://ashford.local" rel="home">Ashford Prime Facts</a>
+          </p>
+        </div>
 
-  <nav>This is the main nav</nav>
-  <h1>Index page</h1>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-bars">Toggle navigation</span>
+        </button>
+        <div class="branding-bottom clearfix">
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-navigation-container">
+              <ul id="primary-menu" class="menu">
+                <li><a href="index.html">Home</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- #nav -->
+          <a class="button button--radius get-update" href="#updates">Get updates</a>
+        </div>
+      </div>
+    </header>
 
-  <div class="container">
-    <p class="welcome-paragraph">Welcome to the FFW prototype project. This index page is used to build and overview of all the blocks and pages of the prototype. For each page type, please extend the layout.twig file and create a new page template in /pages/*.twig.</p>
+    <div class="container">
+      <p class="welcome-paragraph">Welcome to the FFW prototype project. This index page is used to build and overview of all the blocks and pages of the prototype. For each page type, please extend the layout.twig file and create a new page template in /pages/*.twig.</p>
+    </div>
   </div>
 
-  <footer>This is a footer</footer>
+  <footer id="footer" class="footer">
+    <div class="footer-container container">
+      <div class="site-info">© Copyright 2016</div>
+      <div class="footer-menu">
+        <ul id="footer-menu" class="menu">
+          <li class="menu-item  menu-item menu-item-type-post_type menu-item-object-page menu-item-20 ">
+            <a href="http://ashford.local/privacy-policy/">Privacy Policy</a>
+          </li>
+          <li class="menu-item  menu-item menu-item-type-post_type menu-item-object-page menu-item-16 ">
+            <a href="http://ashford.local/contact-us/">Contact</a>
+          </li>
+          <li class="menu-item  menu-item menu-item-type-post_type menu-item-object-page menu-item-10 ">
+            <a href="http://ashford.local/disclaimer/">Disclaimer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 
   <div class="index-links">
@@ -47,14 +93,17 @@
     <nav>
 
       <a href="index.html">Index</a>
+      <a href="home.html">Home</a>
       <a href="styleguide.html">Styleguide</a>
     </nav>
   </div>
   <script src="js/lib/media.match.min.js"></script>
   <script src="js/lib/enquire.min.js"></script>
   <script src="js/lib/jquery.min.js"></script>
-  <script src="js/lib/chosen.jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script type='text/javascript' src='js/alertify.js'></script>
+  <script type='text/javascript' src='js/wrap-scripts.js'></script>
+  <script type='text/javascript' src='js/skip-link-focus-fix.js'></script>
+  <script type='text/javascript' src='js/dropdown.js'></script>
 </body>
 
 </html>

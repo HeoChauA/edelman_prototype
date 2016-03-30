@@ -5,9 +5,11 @@
 
 .branding {
   max-width: 100%;
+  margin-right: rem(60px);
 
   @include breakpoint(desktop) {
     display: inline-block;
+    margin: 0;
     padding: 4px 0;
     vertical-align: middle;
     width: 30%;

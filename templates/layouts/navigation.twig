@@ -1,3 +1,15 @@
 {% block navigation %}
-  <nav>This is the main nav</nav>
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="fa fa-bars">Toggle navigation</span>
+  </button>
+    <div class="branding-bottom clearfix">
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <div class="menu-main-navigation-container">
+          <ul id="primary-menu" class="menu">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </nav><!-- #nav -->
+      <a class="button button--radius get-update" href="#updates">Get updates</a>
+    </div>
 {% endblock %}
