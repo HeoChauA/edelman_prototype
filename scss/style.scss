@@ -53,6 +53,9 @@
 /* Import components */
 @import "layouts/news";
 
+// Component.
+@import 'layouts/accordion';
+
 /* module or section specific styles */
 @import "modules/page-section";
 @import "modules/section-content";
