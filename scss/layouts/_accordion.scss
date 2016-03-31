@@ -1,0 +1,81 @@
+// Accordion styling.
+$border-hr: #dcdfe0;
+$color-icon-accordion: #2b6187;
+$width-border: rem(2px);
+$width-icon: rem(24px);
+
+.accordion {
+  margin-bottom: rem(73px);
+
+  @include breakpoint(desktop) {
+    padding-left: rem(105px);
+    padding-right: rem(105px);
+  }
+
+  &__content {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: rem(29px);
+  }
+
+  &__group {
+    border-bottom: 1px solid $border-hr;
+    margin-bottom: rem(29px);
+  }
+
+  &__question {
+    color: $blue-dark;
+    font-size: rem(20px);
+    margin: 0 0 rem(30px);
+    font-weight: 700;
+    position: relative;
+    padding-right: rem(35px);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__answer {
+    padding-top: 2px;
+    padding-bottom: rem(45px);
+
+    ul,
+    p,
+    ol {
+      margin-top: 0;
+      line-height: rem(30px);
+    }
+  }
+}
+
+.icon-accordion {
+  height: $width-icon;
+  width: $width-icon;
+  position: absolute;
+  right: 0;
+  top: 2px;
+
+  &:before {
+    content: '';
+    border-bottom: $width-border solid $color-icon-accordion;
+    position: absolute;
+    left: 0;
+    top: ($width-icon - $width-border) / 2;
+    right: 0;
+  }
+}
+
+.icon-plus {
+  &:after {
+    content: '';
+    border-left: 2px solid $color-icon-accordion;
+    position: absolute;
+    left: ($width-icon - $width-border) / 2;
+    top: 0;
+    bottom: 0;
+  }
+}

@@ -6,7 +6,10 @@
 {% block page_heading %}Thanh Component{% endblock %}
 
 {% block content %}
-  {% include '../components/banner.twig' %}
+  <div class="container">
+    {% include '../components/accordion.twig' %}
+    {% include '../components/accordion.twig' %}
+  </div>
 {% endblock %}
 
 {% block footer_scripts %}
