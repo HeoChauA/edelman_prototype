@@ -18,6 +18,7 @@ $width-icon: rem(24px);
   }
 
   &__title {
+    display: block;
     margin-bottom: rem(29px);
   }
 
@@ -40,8 +41,9 @@ $width-icon: rem(24px);
   }
 
   &__answer {
-    padding-top: 2px;
+    display: none;
     padding-bottom: rem(45px);
+    padding-top: 2px;
 
     ul,
     p,
