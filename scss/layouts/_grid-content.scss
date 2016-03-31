@@ -1,67 +1,87 @@
 $violet: #222c5d;
 
-.grid-content {
-	.message,
-	.resources {
-		@include gallery(6 of $susy-desktop);
-    width: 50%;
-    padding-top: 104px;
-	}
+.box-grid {
+  .message,
+  .resources {
+    @include susy-media(tablet) {
+      @include gallery(6 of $susy-desktop);
+      width: 50%;
+    }
+  }
 
-	.resources {
-		margin-left: 50% !important; 
-	}
+  .resources {
+    @include susy-media(tablet) {
+      margin-left: 50% !important; 
+    }
+  }
 
-	.grid__content {
-		width: $container / 2;
-	}
+  &__content {
+    padding: rem(20px);
 
-	.grid__title h2 {
-		@include cinzel;
-		font-size: rem(50px);
-		margin-top: 0;
-		line-height: rem(50px);
-		margin-bottom: rem(28px);
-	}
+    @include susy-media(tablet) {
+      padding: rem(50px 20px);
+    }
 
-	.grid__body {
-		line-height: rem(30px);	
-		margin-bottom: rem(55px);
-	}
+    @include susy-media(superdesktop) {
+      padding: rem(104px 20px 118px);
+    }
+  }
 
-	.grid__more {
-		margin-bottom: rem(118px);
+  .box-grid--width {
+    @include susy-media(superdesktop) {
+      width: $container / 2;
+    }
+  }
 
-		.button {
-			padding: rem(17px 40px);
-			font-size: rem(16px);
-		}
-	}
+  &__title h2 {
+    @extend %title-big;
+    @include cinzel;
+    margin-bottom: rem(28px);
+    margin-top: 0;
+  }
+
+  &__body {
+    line-height: rem(30px);  
+    margin-bottom: rem(35px);
+  }
+
+  &__more {
+    padding-top: rem(20px);
+
+    .button {
+      font-size: rem(16px);
+      padding: rem(17px 40px);
+    }
+  }
+
+  .message .box-grid__content {
+    @include susy-media(desktop) {
+      float: right;
+      padding-right: rem(65px);
+    }
+  }
+
+  .resources .box-grid__content {
+    @include susy-media(desktop) {
+      float: left;
+      padding-left: rem(65px);
+    }
+  }
 }
 
 .message {
-	background: $violet;
-	color: $white;
+  background: $violet;
+  color: $white;
 
-	.grid__content {
-		float: right;
-		padding-right: rem(65px);
-	}
-
-	.grid__title h2 {
-		color: $white;
-	}
+  .box-grid__title h2 {
+    color: $white;
+  }
 }
 
 .resources {
-	background: $gray-f5;
+  background: $gray-f5;
 
-	.grid__content {
-		float: left;
-		padding-left: rem(65px);
-	}
-
-	.grid__title h2 {
-		color: $blue-dark;
-	}
+  .box-grid__title h2 {
+    color: $blue-dark;
+  }
 }
