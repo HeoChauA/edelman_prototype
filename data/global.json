@@ -22,5 +22,11 @@
          "name":"Styleguide",
          "link":"styleguide.html"
       }
+   ],
+   "posts": [
+      {
+         "thumbnail":"images/header.png",
+         "title": "Post title"
+      }
    ]
 }

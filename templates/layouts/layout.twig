@@ -15,13 +15,15 @@
         {% include 'header.twig' %}
       {% endblock %}
 
-      {% block content %}
-        <section role="main" class="content-wrapper">
-          <div class="wrapper ">
+      {% block feature %}{% endblock %}
+
+      <section role="main" class="content-wrapper">
+        <div class="wrapper ">
+        {% block content %}
             <h1>{% block title %}{% endblock %}</h1>
-          </div>
-        </section>
-      {% endblock %}
+        {% endblock %}
+        </div>
+      </section>
     </div>
 
     {% block footer %}

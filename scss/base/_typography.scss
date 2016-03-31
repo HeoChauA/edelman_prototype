@@ -12,8 +12,10 @@ h6 {
 
 h2 {
   @include cinzel();
-  font-size: rem(40px);
   color: $blue-dark;
+  @include breakpoint(tablet) {
+    font-size: rem(40px);
+  }
 }
 
 a {

@@ -1,3 +1,7 @@
+header {
+  min-height: rem(92px);
+}
+
 .header-container {
   @extend %clearfix;
   padding: 10px 0 14px;
@@ -21,9 +25,13 @@
 }
 
 .site-image {
-  > a {
+  a {
     display: block;
     line-height: 0;
+  }
+  img {
+    width: auto;
+    max-width: 100%;
   }
 }
 
