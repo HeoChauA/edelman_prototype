@@ -68,15 +68,15 @@ $blue-1: #2b6187;
   }
 
   &__loadmore {
-  	text-align: center;
-  	padding-top: 50px;
-  	margin-bottom: 30px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    text-align: center;
 
     .button {
       font-size: rem(16px);
       font-weight: bold;
-      text-transform: uppercase;
       padding: rem(17px 85px);
+      text-transform: uppercase;
     }
   }
 }
