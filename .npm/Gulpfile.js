@@ -18,6 +18,7 @@ var gulp = require('gulp'),
     scss: '../scss/**/*.scss',
     css: '../css',
     html_blocks: '../templates/blocks/*.twig',
+    html_component: '../templates/components/*.twig',
     html_layouts: '../templates/layouts/*.twig',
     html_pages: '../templates/pages/*.twig',
     dataJson: '../data/*.json',
@@ -32,7 +33,7 @@ gulp.task('local-development', ['sass-dev', 'templates'], function () {
   });
 
   gulp.watch(src.scss, ['sass-dev']);
-  gulp.watch([src.html_blocks, src.html_layouts, src.html_pages], ['templates']);
+  gulp.watch([src.html_blocks, src.html_layouts, src.html_pages, src.html_component], ['templates']);
   gulp.watch(src.javascript, reload);
   gulp.watch(src.dataJson, ['templates', reload]);
 });
@@ -117,7 +118,7 @@ gulp.task('dev', ['sass-dev', 'templates', 'scss-lint', 'js-lint'], function () 
   });
 
   gulp.watch(src.scss, ['sass-dev', 'scss-lint']);
-  gulp.watch([src.html_blocks, src.html_layouts, src.html_pages], ['templates']);
+  gulp.watch([src.html_blocks, src.html_layouts, src.html_pages, src.html_component], ['templates']);
   gulp.watch(src.javascript, ['js-lint', reload]);
   gulp.watch(src.dataJson, ['templates', reload]);
 });
