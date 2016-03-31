@@ -1,6 +1,8 @@
 $violet: #222c5d;
 
 .box-grid {
+  overflow: hidden;
+
   .message,
   .resources {
     @include susy-media(tablet) {
@@ -11,7 +13,7 @@ $violet: #222c5d;
 
   .resources {
     @include susy-media(tablet) {
-      margin-left: 50% !important; 
+      margin-left: 50% !important;
     }
   }
 
@@ -41,7 +43,7 @@ $violet: #222c5d;
   }
 
   &__body {
-    line-height: rem(30px);  
+    line-height: rem(30px);
     margin-bottom: rem(35px);
   }
 
