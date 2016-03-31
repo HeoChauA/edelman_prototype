@@ -1,0 +1,16 @@
+
+{% extends '../layouts/layout.twig' %}
+
+{% block title %}Thanh Component{% endblock %}
+
+{% block page_heading %}Thanh Component{% endblock %}
+
+{% block content %}
+  {% include '../components/banner.twig' %}
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}
