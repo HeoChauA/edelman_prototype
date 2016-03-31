@@ -17,4 +17,16 @@ jQuery(document).ready(function($) {
   };
 
   jsAccordion();
+
+  //Filter bar in mobile.
+  var $filter_bar = $( '.filter__title-bar' );
+  var filterBarAction = function (e) {
+    if(e) {
+      e.preventDefault();
+    }
+
+    $(this).parents('.filter').toggleClass('filter--open');
+  };
+
+  $filter_bar.click(filterBarAction);
 });

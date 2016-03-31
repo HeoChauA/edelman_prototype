@@ -1,0 +1,20 @@
+
+{% extends '../layouts/layout.twig' %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block page_heading %}FAQ{% endblock %}
+
+{% block content %}
+  {% include '../components/banner.twig' %}
+  {% include '../components/filter.twig' %}
+  <div class="container">
+    {% include '../components/accordion.twig' %}
+  </div>
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>FFW Prototype - Index page</title>
+  <title>FFW Prototype - FAQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
@@ -62,28 +62,83 @@
       </div>
     </header>
 
-    <div class="feature">
-      <div class="page__title__wrap clearfix">
-        <div class="page__title__image" style="background-image: url(images/header.png)"></div>
-        <div class="page__title__container container">
-          <h1 class="page__title">Post title</h1>
-        </div>
-      </div>
-    </div>
 
     <section role="main" class="content-wrapper">
       <div class="wrapper ">
+        <div class="banner">
+          <div class="banner__image" style="background-image: url('images/header.png');"></div>
+          <div class="banner-container container">
+            <div class="banner__content">
+              <h1 class="banner__heading title-big">leadership you can rely on</h1>
+              <h2 class="banner__subheading">experience you can trust</h2>
+            </div>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="container">
+            <a class="filter__title-bar" href="#">Filter by category</a>
+            <div class="filter__item all">
+              <a href="#" class="filter__link selected" data-category-id="all">All</a>
+            </div>
+            <div class="filter__item">
+              <a href="#" class="filter__link" data-category-id="1">What Happened</a>
+            </div>
+            <div class="filter__item">
+              <a href="#" class="filter__link" data-category-id="2">Cars Affected</a>
+            </div>
+            <div class="filter__item">
+              <a href="#" class="filter__link" data-category-id="3">Safety &#38; Environment</a>
+            </div>
+            <div class="filter__item">
+              <a href="#" class="filter__link" data-category-id="4">Getting It Fixed</a>
+            </div>
+            <div class="filter__item">
+              <a href="#" class="filter__link" data-category-id="5">TDI Goodwill Package</a>
+            </div>
+          </div>
+        </div>
         <div class="container">
-          <ul class="list-icon">
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-          </ul>
+          <div class="accordion filtered-container">
+            <h2 class="accordion__title">About Ashford Prime</h2>
+            <div class="js-accordion__content accordion__content">
+              <div class="accordion__group filtered-preview" data-item-categories="1">
+                <h3 class="accordion__question">Strong alignment of interest</h3>
+                <div class="accordion__answer">
+                  <p>With respect to vehicles affected by the TDI emissions issue, the EPA has stated that "although these vehicles have emissions exceeding standards, these violations do not present a safety hazard and the cars remain legal to drive and
+                    resell. Owners of cars of these models and years do not need to take any action at this time."
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__group filtered-preview" data-item-categories="2,4">
+                <h3 class="accordion__question">Strong corporate governance</h3>
+                <div class="accordion__answer">
+                  <p>With respect to vehicles affected by the TDI emissions issue, the EPA has stated that "although these vehicles have emissions exceeding standards, these violations do not present a safety hazard and the cars remain legal to drive and
+                    resell. Owners of cars of these models and years do not need to take any action at this time."
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__group filtered-preview" data-item-categories="1,3">
+                <h3 class="accordion__question">Committed to the interest of stockholders</h3>
+                <div class="accordion__answer">
+                  <ul>
+                    <li>Bought back ~5% of Ashford’s outstanding shares and doubled common dividend</li>
+                    <li>Refinanced debt at lower interest rates to improve cash flow</li>
+                    <li>Board has announced exploration of strategic alternatives and engaged financial advisor (prior to Sessa’s involvement)</li>
+                    <li>Special committee has retained a financial advisor</li>
+                    <li>Strategic reviews should be governed by the quality and thoroughness of the review, not by some arbitrary sense of time</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion__group filtered-preview" data-item-categories="2,5">
+                <h3 class="accordion__question">Diversified platform</h3>
+                <div class="accordion__answer">
+                  <p>With respect to vehicles affected by the TDI emissions issue, the EPA has stated that "although these vehicles have emis
+                    <p></p>sions exceeding standards, these violations do not present a safety hazard and the cars remain legal to drive and resell. Owners of cars of these models and years do not need to take any action at this time."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -133,6 +188,7 @@
   <script type='text/javascript' src='js/skip-link-focus-fix.js'></script>
   <script type='text/javascript' src='js/dropdown.js'></script>
   <script type='text/javascript' src='js/congscript.js'></script>
+
 </body>
 
 </html>
