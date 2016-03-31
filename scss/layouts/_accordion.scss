@@ -1,11 +1,16 @@
 // Accordion styling.
 $border-hr: #dcdfe0;
 $color-icon-accordion: #2b6187;
-$width-border: 2px;
-$width-icon: 24px;
+$width-border: rem(2px);
+$width-icon: rem(24px);
 
 .accordion {
-  margin-bottom: 73px;
+  margin-bottom: rem(73px);
+
+  @include breakpoint(desktop) {
+    padding-left: rem(105px);
+    padding-right: rem(105px);
+  }
 
   &__content {
     display: inline-block;
@@ -13,21 +18,21 @@ $width-icon: 24px;
   }
 
   &__title {
-    margin-bottom: 29px;
+    margin-bottom: rem(29px);
   }
 
   &__group {
     border-bottom: 1px solid $border-hr;
-    margin-bottom: 29px;
+    margin-bottom: rem(29px);
   }
 
   &__question {
     color: $blue-dark;
     font-size: rem(20px);
-    margin: 0 0 30px;
+    margin: 0 0 rem(30px);
     font-weight: 700;
     position: relative;
-    padding-right: 35px;
+    padding-right: rem(35px);
 
     &:hover {
       cursor: pointer;
@@ -36,13 +41,13 @@ $width-icon: 24px;
 
   &__answer {
     padding-top: 2px;
-    padding-bottom: 45px;
+    padding-bottom: rem(45px);
 
     ul,
     p,
     ol {
       margin-top: 0;
-      line-height: 30px;
+      line-height: rem(30px);
     }
   }
 }
