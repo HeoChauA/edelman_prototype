@@ -1,0 +1,67 @@
+$violet: #222c5d;
+
+.grid-content {
+	.message,
+	.resources {
+		@include gallery(6 of $susy-desktop);
+    width: 50%;
+    padding-top: 104px;
+	}
+
+	.resources {
+		margin-left: 50% !important; 
+	}
+
+	.grid__content {
+		width: $container / 2;
+	}
+
+	.grid__title h2 {
+		@include cinzel;
+		font-size: rem(50px);
+		margin-top: 0;
+		line-height: rem(50px);
+		margin-bottom: rem(28px);
+	}
+
+	.grid__body {
+		line-height: rem(30px);	
+		margin-bottom: rem(55px);
+	}
+
+	.grid__more {
+		margin-bottom: rem(118px);
+
+		.button {
+			padding: rem(17px 40px);
+			font-size: rem(16px);
+		}
+	}
+}
+
+.message {
+	background: $violet;
+	color: $white;
+
+	.grid__content {
+		float: right;
+		padding-right: rem(65px);
+	}
+
+	.grid__title h2 {
+		color: $white;
+	}
+}
+
+.resources {
+	background: $gray-f5;
+
+	.grid__content {
+		float: left;
+		padding-left: rem(65px);
+	}
+
+	.grid__title h2 {
+		color: $blue-dark;
+	}
+}
