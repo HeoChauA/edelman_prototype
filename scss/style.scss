@@ -39,15 +39,18 @@
 @import 'helpers/helper';
 
 /* Layout for page */
-@import "layouts/layout";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/navigation";
-@import "layouts/get-updates";
 @import "layouts/banner";
-@import "layouts/modal";
 @import "layouts/cta";
+@import "layouts/footer";
+@import "layouts/get-updates";
+@import "layouts/header";
+@import "layouts/layout";
+@import "layouts/modal";
+@import "layouts/navigation";
 @import "layouts/page";
+
+/* Import components */
+@import "layouts/news";
 
 /* module or section specific styles */
 @import "modules/page-section";
