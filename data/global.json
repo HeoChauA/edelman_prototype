@@ -21,6 +21,10 @@
       {
          "name":"Styleguide",
          "link":"styleguide.html"
+      },
+      {
+         "name":"FAQ",
+         "link":"faq.html"
       }
    ],
    "posts": [

@@ -1,0 +1,102 @@
+// Filter styling.
+$color-bg-filter-active: #2b6187;
+
+.filter {
+  background-color: $blue;
+  padding-bottom: rem(15px);
+  padding-top: rem(15px);
+
+  @include breakpoint($desktop) {
+    &--open {
+      .filter {
+        &__item {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &--open {
+    .filter {
+      &__item {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    @include border-radius(0);
+    background-color: transparent;
+    border-color: transparent $silver $silver;
+    border-style: solid;
+    border-width: 1px 0;
+    text-align: left;
+    width: 100%;
+    color: $white;
+    padding: rem(8px 23px);
+    display: block;
+
+    @include breakpoint($desktop) {
+      font-size: rem(16px);
+      width: auto;
+      border: 0;
+
+      &.selected,
+      &:hover {
+        @include border-radius(20px);
+        background-color: $color-bg-filter-active;
+      }
+    }
+
+    &.selected,
+    &:hover {
+      @include border-radius(0);
+      background-color: $color-bg-filter-active;
+      color: $white;
+    }
+  }
+
+  &__item {
+    display: none;
+    margin-bottom: 0;
+    width: 100%;
+
+    @include breakpoint($desktop) {
+      display: inline-block;
+      width: auto;
+
+      &:first-of-type {
+        margin-left: rem(80px);
+      }
+    }
+  }
+
+  &__title-bar {
+    font-size: rem(14px);
+    display: block;
+    font-weight: 700;
+    padding: 15px 20px;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+
+    @include breakpoint($desktop) {
+      display: none;
+    }
+
+    &:visited {
+      color: $white;
+    }
+
+    i {
+      margin-top: -12px;
+      position: absolute;
+      right: 33px;
+      top: 50%;
+
+      &:before {
+        font-size: rem(16px);
+      }
+    }
+  }
+}

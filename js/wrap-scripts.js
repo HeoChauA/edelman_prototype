@@ -76,16 +76,18 @@
    * Filter page items by taxonomy.
    */
   function FilterClick() {
-    var filterLink = $('.filter__item  a[data-category-id]'),
+    var filterLink = $('.filter__item a[data-category-id]'),
         accordiongroup = $('.filtered-preview');
 
-    filterLink.click(function() {
+    filterLink.click(function(e) {
+      e.preventDefault();
       $('.form-title-search input').val('');
       accordiongroup.removeClass('show');
       accordiongroup.addClass('hide');
       $('.filtered-preview').removeClass('.fadeInDown');
 
-      if($(this).parent().hasClass('all')) {
+      if($(this).hasClass('all')) {
+        e.preventDefault();
         $('.filter__item  a').removeClass('selected');
         $(this).addClass('selected');
         accordiongroup.removeClass('hide');
@@ -118,10 +120,8 @@
           }
         }
       });
-      newsPageLoad();
-      FAQ.checkNoResults();
-
-      return false;
+      // newsPageLoad();
+      // FAQ.checkNoResults();
     });
   }
 
