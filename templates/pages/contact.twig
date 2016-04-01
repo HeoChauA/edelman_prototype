@@ -1,12 +1,26 @@
 
 {% extends '../layouts/layout.twig' %}
 
-{% block title %}Cong Component{% endblock %}
+{% block title %}Contact{% endblock %}
 
-{% block page_heading %}Cong Component{% endblock %}
+{% block page_heading %}Contact{% endblock %}
+
+{% block feature %}
+  {% for post in posts %}
+    <div class="feature">
+      <div class="page__title__wrap clearfix">
+        <div class="page__title__image" style="background-image: url({{ post.thumbnail }})"> </div>
+        <div class="page__title__container container">
+          <h1 class="page__title">Contact</h1>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
 
 {% block content %}
-	<div class="container">
+  <div class="container">
+  	{% include '../components/contact.twig' %}
   </div>
 {% endblock %}
 

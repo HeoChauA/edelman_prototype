@@ -1,0 +1,51 @@
+$gray-dc: #dcdfe0;
+
+.contact {
+  margin-bottom: rem(60px);
+  margin-top: rem(63px);
+
+  &__description {
+    margin-bottom: rem(30px);
+  }
+
+  &__title {
+    margin-bottom: rem(23px);
+
+    h3 {
+      @include cinzel;
+      color: $secondary-color;
+      font-size: rem(40px);
+      margin: 0;
+    }
+  }
+
+  &-has-border {
+    border-bottom: rem(1px) solid $gray-dc;
+    margin-bottom: rem(28px);
+    padding-bottom: rem(35px);
+  }
+
+  &-grid {
+    margin-bottom: rem(30px);
+
+    @include susy-media(tablet) {
+      @include gallery(6 of $susy-desktop);
+      margin-bottom: 0;
+    }
+  }
+
+  &__infomation {
+    margin-bottom: rem(30px);
+  }
+
+  p {
+    line-height: rem(30px);
+    margin: 0;
+  }
+
+  label {
+    display: block;
+    font-size: rem(18px);
+    font-weight: bold;
+  }
+}
