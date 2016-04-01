@@ -1,0 +1,32 @@
+
+{% extends '../layouts/layout.twig' %}
+
+{% block title %}Leader ship{% endblock %}
+
+{% block page_heading %}Leader ship{% endblock %}
+
+{% block feature %}
+  {% for post in posts %}
+    <div class="feature">
+      <div class="page__title__wrap clearfix">
+        <div class="page__title__image" style="background-image: url({{ post.thumbnail }})"> </div>
+        <div class="page__title__container container">
+          <h1 class="page__title">Management</h1>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+  {% include '../components/filter-leadership.twig' %}
+  <div class="container">
+    {% include '../components/profile.twig' %}
+  </div>
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}

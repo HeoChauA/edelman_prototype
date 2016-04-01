@@ -1,11 +1,22 @@
 // Filter styling.
 $color-bg-filter-active: #2b6187;
+$color-border-filter-leader: rgba($white, .1);
 
 .filter {
   background-color: $blue;
   margin-bottom: rem(37px);
-  padding-bottom: rem(15px);
-  padding-top: rem(15px);
+  padding: 0;
+
+  @include breakpoint($desktop) {
+    padding-bottom: rem(15px);
+    padding-top: rem(15px);
+  }
+
+  .container {
+    @include susy-media(max-width $desktop) {
+      margin: 0;
+    }
+  }
 
   &--open {
     .filter {
@@ -21,9 +32,7 @@ $color-bg-filter-active: #2b6187;
 
   &__link {
     background-color: transparent;
-    border-color: transparent $silver $silver;
-    border-style: solid;
-    border-width: 1px 0;
+    border: 0;
     text-align: left;
     width: 100%;
     color: $white;
@@ -33,13 +42,12 @@ $color-bg-filter-active: #2b6187;
     @include breakpoint($desktop) {
       font-size: rem(16px);
       width: auto;
-      border: 0;
     }
 
     &.selected,
     &:hover {
       @include border-radius(0);
-      background-color: $color-bg-filter-active;
+      background-color: transparent;
       color: $white;
 
       @include breakpoint($desktop) {
@@ -65,10 +73,11 @@ $color-bg-filter-active: #2b6187;
   }
 
   &__title-bar {
-    font-size: rem(14px);
+    color: $white;
     display: block;
+    font-size: rem(14px);
     font-weight: 700;
-    padding: rem(15px 20px);
+    padding: rem(15px 23px);
     position: relative;
     text-transform: uppercase;
     width: 100%;
@@ -77,18 +86,62 @@ $color-bg-filter-active: #2b6187;
       display: none;
     }
 
-    &:visited {
+    &:visited,
+    &:hover {
       color: $white;
     }
 
     i {
-      margin-top: -12px;
+      margin-top: rem(-12px);
       position: absolute;
       right: rem(33px);
       top: 50%;
 
       &:before {
         font-size: rem(16px);
+      }
+    }
+  }
+
+  &--leader {
+    @include breakpoint($desktop) {
+      padding: 0;
+    }
+
+    .filter {
+      &__link {
+        @include breakpoint($desktop) {
+          display: inline-block;
+          padding: rem(0 31px 0 28px);
+        }
+
+        &.selected,
+        &:hover {
+          @include breakpoint($desktop) {
+            @include border-radius(0);
+            background-color: transparent;
+          }
+        }
+
+        &:hover {
+          @include breakpoint($desktop) {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__item {
+        @include breakpoint($desktop) {
+          margin-left: -3px;
+          margin-right: -3px;
+          padding: rem(19px 0 24px);
+          width: 50%;
+
+          &:first-of-type {
+            border-right: 1px solid $color-border-filter-leader;
+            text-align: right;
+          }
+        }
       }
     }
   }

@@ -16,17 +16,27 @@ jQuery(document).ready(function($) {
     });
   };
 
+  function filterProcess() {
+    //Filter bar in mobile.
+    var $filter_bar = $( '.filter__title-bar' );
+    var filterBarAction = function (e) {
+      if(e) {
+        e.preventDefault();
+      }
+
+      $(this).parents('.filter').toggleClass('filter--open');
+    };
+
+    $filter_bar.click(filterBarAction);
+
+    //Close menu filter when click out.
+    $(document).on('click', function (e) {
+      if ($filter_bar.is(':visible') && !$filter_bar.is(e.target) && !$filter_bar.has(e.target).length) {
+        $filter_bar.parents('.filter').removeClass('filter--open');
+      }
+    });
+  }
+
   jsAccordion();
-
-  //Filter bar in mobile.
-  var $filter_bar = $( '.filter__title-bar' );
-  var filterBarAction = function (e) {
-    if(e) {
-      e.preventDefault();
-    }
-
-    $(this).parents('.filter').toggleClass('filter--open');
-  };
-
-  $filter_bar.click(filterBarAction);
+  filterProcess();
 });

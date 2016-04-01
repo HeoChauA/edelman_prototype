@@ -4,29 +4,74 @@
       'name': 'Montgomery J. Bennett',
       'description': 'Chairman',
       'body': '<ul><li>13 years of public board experience</li><li>Founder, Chairman, & CEO of AHP</li></ul>',
+      'category': 'management',
     },
     {
       'link_img': 'images/profile-2.jpg',
       'name': 'Lead Director',
       'description': 'Chairman',
       'body': '<ul><li>10 years of public board experience</li><li>Previously CEO of CNL Real Estate Advisors and previously CEO of   Trustreet Properties</li></ul>',
+      'category': 'director',
     },
     {
       'link_img': 'images/profile-1.jpg',
       'name': 'Douglas A. Kessler',
       'description': 'President',
       'body': '<ul><li>2 years of public board experience</li><li>President of AHP</li></ul>',
-    }
-  ] 
+      'category': 'management'
+    },
+    {
+      'link_img': 'images/profile-2.jpg',
+      'name': 'Montgomery J. Bennett',
+      'description': 'Chairman',
+      'body': '<ul><li>13 years of public board experience</li><li>Founder, Chairman, & CEO of AHP</li></ul>',
+      'category': 'management',
+    },
+    {
+      'link_img': 'images/profile-1.jpg',
+      'name': 'Lead Director',
+      'description': 'Chairman',
+      'body': '<ul><li>10 years of public board experience</li><li>Previously CEO of CNL Real Estate Advisors and previously CEO of   Trustreet Properties</li></ul>',
+      'category': 'director',
+    },
+    {
+      'link_img': 'images/profile-2.jpg',
+      'name': 'Douglas A. Kessler',
+      'description': 'President',
+      'body': '<ul><li>2 years of public board experience</li><li>President of AHP</li></ul>',
+      'category': 'management'
+    },
+    {
+      'link_img': 'images/profile-1.jpg',
+      'name': 'Montgomery J. Bennett',
+      'description': 'Chairman',
+      'body': '<ul><li>13 years of public board experience</li><li>Founder, Chairman, & CEO of AHP</li></ul>',
+      'category': 'management',
+    },
+    {
+      'link_img': 'images/profile-2.jpg',
+      'name': 'Lead Director',
+      'description': 'Chairman',
+      'body': '<ul><li>10 years of public board experience</li><li>Previously CEO of CNL Real Estate Advisors and previously CEO of   Trustreet Properties</li></ul>',
+      'category': 'director',
+    },
+    {
+      'link_img': 'images/profile-1.jpg',
+      'name': 'Douglas A. Kessler',
+      'description': 'President',
+      'body': '<ul><li>2 years of public board experience</li><li>President of AHP</li></ul>',
+      'category': 'management'
+    },
+  ]
 %}
 
 {% block profile %}
   <div class="profile">
-  	<div class="profile__header">
-  	<h2>Aggregate 44 Years of Public Board And Real Estate Experience</h2>
-  	</div>
+    <div class="profile__header">
+    <h2>Aggregate 44 Years of Public Board And Real Estate Experience</h2>
+    </div>
     {% for box in profile %}
-      <div class="profile__item">
+      <div class="profile__item filtered-preview" data-item-categories={{ box.category }}>
         <div class="profile__image"><div class="field-img"><img height="200" width="320" src="{{ box.link_img }}" typeof="foaf:Image"></div></div>
         <div class="profile__content">
           <div class="profile__name"><h3>{{ box.name }}</h3></div>
