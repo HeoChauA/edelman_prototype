@@ -7,6 +7,7 @@
     FaqHashCheckerInit();
     checkPageShort();
     checkDisclaimer();
+    leaderShip();
 
     $(window).resize(function() {
       MenuResponsive();
@@ -244,5 +245,20 @@
   function resizeDisclaimer() {
     var height = $(window).height();
     $('.dialog>div').height((height *.9)+'px');
+  }
+
+  function filterLeaderClick() {
+    $('.filter--leader .filter__link').bind('click', function() {
+      var $textSelected = $(this).text();
+      var $pageTitle = $('.page__title');
+      $pageTitle.text($textSelected);
+    });
+  }
+
+  function leaderShip() {
+    filterLeaderClick();
+
+    var $filterLeaderSelected = $('.filter--leader .filter__link.selected');
+    $filterLeaderSelected.trigger('click');
   }
 })(jQuery);

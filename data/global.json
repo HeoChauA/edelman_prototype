@@ -29,6 +29,10 @@
       {
          "name":"Contact",
          "link":"contact.html"
+      },
+      {
+         "name":"Leader ship",
+         "link":"leadership.html"
       }
    ],
    "posts": [
