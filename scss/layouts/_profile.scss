@@ -1,8 +1,22 @@
 $gray-e2: #e2e2e2;
 
 .profile {
+	padding-top: rem(30px);
+
   @include susy-media(desktop) {
-    padding: rem(0 105px);
+    padding: rem(58px 105px 0);
+  }
+
+  &__header {
+  	text-align: center;
+  	margin-bottom: rem(39px);
+
+  	h2 {
+  		margin-bottom: 0;
+  		margin-top: 0;
+  		font-size: rem(40px);
+  		line-height: rem(50px);
+  	}
   }
 
   &__item {
@@ -39,7 +53,6 @@ $gray-e2: #e2e2e2;
       font-size: rem(30px);
       margin-bottom: 0;
       margin-top: 0;
-      text-transform: uppercase;
     }
   }
 
