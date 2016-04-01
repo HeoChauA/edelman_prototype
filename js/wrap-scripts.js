@@ -86,7 +86,7 @@
       accordiongroup.addClass('hide');
       $('.filtered-preview').removeClass('.fadeInDown');
 
-      if($(this).hasClass('all')) {
+      if($(this).parent().hasClass('all')) {
         e.preventDefault();
         $('.filter__item  a').removeClass('selected');
         $(this).addClass('selected');
