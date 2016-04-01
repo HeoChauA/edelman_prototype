@@ -120,8 +120,8 @@
           }
         }
       });
-      // newsPageLoad();
-      // FAQ.checkNoResults();
+      newsPageLoad();
+      //FAQ.checkNoResults();
     });
   }
 
