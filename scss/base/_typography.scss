@@ -36,3 +36,25 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.pager {
+  overflow: hidden;
+
+  li {
+    display: inline-block;
+    float: left;
+    margin: rem(0 5px);
+  }
+}
+
+.form-text {
+  border-bottom: 1px solid $gray-d5;
+  border-left: none;
+  border-top: none;
+  color: $gray-38;
+  font-size: rem(14px);
+  font-weight: bold;
+  margin-bottom: rem(10px);
+  padding: rem(25px 20px);
+  text-transform: uppercase;
+}
