@@ -82,15 +82,15 @@
     filterLink.click(function(e) {
       e.preventDefault();
       $('.form-title-search input').val('');
-      accordiongroup.removeClass('show');
-      accordiongroup.addClass('hide');
+      accordiongroup.removeClass('filtered-show');
+      accordiongroup.addClass('filtered-hide');
       $('.filtered-preview').removeClass('.fadeInDown');
 
       if($(this).parent().hasClass('all')) {
         e.preventDefault();
         $('.filter__item  a').removeClass('selected');
         $(this).addClass('selected');
-        accordiongroup.removeClass('hide');
+        accordiongroup.removeClass('filtered-hide');
       }
 
       $('.filter__item a').removeClass('selected');
@@ -115,8 +115,8 @@
         var i;
         for (i=0; i < arrLen; ++i) {
           if ($.inArray(item_array[i], cat_array) >= 0) {
-            accordiongroup.eq(index).addClass('show');
-            accordiongroup.eq(index).removeClass('hide');
+            accordiongroup.eq(index).addClass('filtered-show');
+            accordiongroup.eq(index).removeClass('filtered-hide');
           }
         }
       });
@@ -129,7 +129,7 @@
    * Display/hide load more button.
    */
   function newsPageLoad () {
-    var $items = $('.news .news__item:not(.hide)'),
+    var $items = $('.news .news__item:not(.filtered-hide)'),
         $load_more_button = $('.load-more');
     $timeline_total = $items.length;
     $timeline_start = 10;
