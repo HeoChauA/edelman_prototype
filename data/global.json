@@ -25,6 +25,10 @@
       {
          "name":"FAQ",
          "link":"faq.html"
+      },
+      {
+         "name":"Contact",
+         "link":"contact.html"
       }
    ],
    "posts": [

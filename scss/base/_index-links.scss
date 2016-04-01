@@ -54,7 +54,7 @@ $pigeon-post-light: rgba($pigeon-post, .75);
 
     &:checked {
       ~ nav {
-        max-height: rem(200px);
+        max-height: rem(500px);
         transition: max-height .5s ease-in;
       }
 
