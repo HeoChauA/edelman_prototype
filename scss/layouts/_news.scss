@@ -5,6 +5,7 @@ $blue-1: #2b6187;
     border-bottom: rem(1px) solid $gray-d5;
     margin-bottom: rem(31px);
     padding-bottom: rem(33px);
+    display: none;
   }
 
   &__title {
@@ -47,7 +48,7 @@ $blue-1: #2b6187;
       display: inline;
       margin-right: rem(5px);
     }
-  }  
+  }
 
   &__more {
     display: inline;
@@ -78,5 +79,18 @@ $blue-1: #2b6187;
       padding: rem(17px 85px);
       text-transform: uppercase;
     }
+
+    .load-less {
+      display: none;
+    }
+  }
+}
+
+$length: 10;
+$newsitem: '.news__item';
+
+@for $i from 1 through $length {
+  #{$newsitem}:nth-child(#{$i}) {
+    display: inherit;
   }
 }

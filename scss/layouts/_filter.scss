@@ -7,20 +7,14 @@ $color-bg-filter-active: #2b6187;
   padding-bottom: rem(15px);
   padding-top: rem(15px);
 
-  @include breakpoint($desktop) {
-    &--open {
-      .filter {
-        &__item {
-          display: inline-block;
-        }
-      }
-    }
-  }
-
   &--open {
     .filter {
       &__item {
         display: block;
+
+        @include breakpoint($desktop) {
+          display: inline-block;
+        }
       }
     }
   }
