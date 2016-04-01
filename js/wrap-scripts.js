@@ -129,11 +129,11 @@
    * Display/hide load more button.
    */
   function newsPageLoad () {
-    var $items = $('.timeline-update .timeline-update__item:not(.hide)'),
+    var $items = $('.news .news__item:not(.hide)'),
         $load_more_button = $('.load-more');
     $timeline_total = $items.length;
-    $timeline_start = 5;
-    $timeline_step = 5;
+    $timeline_start = 10;
+    $timeline_step = 3;
     $items
       .removeClass('fadeInDown')
       .slice(0, $timeline_start)
@@ -150,11 +150,28 @@
   function moreTimeLine(e) {
     e.preventDefault();
     $timeline_start = ($timeline_start + $timeline_step <= $timeline_total) ? ($timeline_start + $timeline_step) : $timeline_total;
-    $('.timeline-update .timeline-update__item').slice(0, $timeline_start).addClass('fadeInDown');
+    $('.news .news__item').slice(0, $timeline_start).addClass('fadeInDown');
 
     if($timeline_start === $timeline_total) {
       $('.load-more').hide();
+      $('.load-less').show();
     }
+  }
+
+  function lessTimeLine(e) {
+    e.preventDefault();
+    $timeline_start = 10;
+    var $postion_item_start = $('.news .news__item').eq($timeline_start - 1).offset().top;
+
+    $('.news .news__item').removeClass('fadeInDown');
+    $('.news .news__item').slice(0, $timeline_start).addClass('fadeInDown');
+    $('.load-more').show();
+    $('.load-less').hide();
+
+    $("html, body").animate({
+      scrollTop: $postion_item_start
+      } ,"slow"
+    );
   }
 
   /**
@@ -162,6 +179,7 @@
    */
   function LoadMoreInit() {
     $('.load-more').click(moreTimeLine);
+    $('.load-less').click(lessTimeLine);
     newsPageLoad();
   }
 
