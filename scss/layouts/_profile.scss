@@ -1,0 +1,76 @@
+$gray-e2: #e2e2e2;
+
+.profile {
+  @include susy-media(desktop) {
+    padding: rem(0 105px);
+  }
+
+  &__item {
+    background: $gray-f5;
+    display: inline-block;
+    margin-bottom: rem(20px);
+    width: 100%;
+  }
+
+  &__image {
+    text-align: center;
+
+    @include susy-media(tablet) {
+      float: left;
+    }
+  }
+
+  &__content {
+    padding-top: rem(28px);
+
+    @include susy-media(tablet) {
+      margin-left: rem(320px);
+    }
+  }
+
+  &__name {
+    @include susy-media(tablet) {
+      padding-left: rem(40px);
+    }
+
+    h3 {
+      @include cinzel;
+      color: $secondary-color;
+      font-size: rem(30px);
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__description {
+    color: $gray-38;
+    font-size: rem(18px);
+    font-style: italic;
+    line-height: rem(18px);
+    margin-bottom: rem(34px);
+
+    @include susy-media(tablet) {
+      padding-left: rem(40px);
+    }
+  }
+
+  &__body {
+    border-top: 1px solid $gray-e2;
+    color: $gray-38;
+    padding-top: rem(15px);
+
+    @include susy-media(tablet) {
+      padding-left: rem(40px);
+    }
+
+    ul {
+      display: inline-block;
+      padding-left: rem(20px);
+
+      li {
+        margin-bottom: rem(3px);
+      }
+    }
+  }
+}
