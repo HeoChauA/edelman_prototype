@@ -26,20 +26,6 @@ $width-icon: rem(24px);
   &__group {
     border-bottom: 1px solid $border-hr;
     margin-bottom: rem(29px);
-
-    &.hide {
-      height: 0;
-      opacity: 0;
-      visibility: hidden;
-      display: none !important;
-      padding: 0;
-    }
-
-    &.show {
-      height: inherit;
-      opacity: 1;
-      visibility: visible;
-    }
   }
 
   &__question {

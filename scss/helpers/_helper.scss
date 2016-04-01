@@ -91,3 +91,19 @@
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
+
+.filtered {
+  &-hide {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: none !important;
+    padding: 0;
+  }
+
+  &-show {
+    height: inherit;
+    opacity: 1;
+    visibility: visible;
+  }
+}
