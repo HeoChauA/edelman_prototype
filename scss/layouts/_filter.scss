@@ -3,6 +3,7 @@ $color-bg-filter-active: #2b6187;
 
 .filter {
   background-color: $blue;
+  margin-bottom: rem(37px);
   padding-bottom: rem(15px);
   padding-top: rem(15px);
 
@@ -25,7 +26,6 @@ $color-bg-filter-active: #2b6187;
   }
 
   &__link {
-    @include border-radius(0);
     background-color: transparent;
     border-color: transparent $silver $silver;
     border-style: solid;
@@ -40,12 +40,6 @@ $color-bg-filter-active: #2b6187;
       font-size: rem(16px);
       width: auto;
       border: 0;
-
-      &.selected,
-      &:hover {
-        @include border-radius(20px);
-        background-color: $color-bg-filter-active;
-      }
     }
 
     &.selected,
@@ -53,6 +47,11 @@ $color-bg-filter-active: #2b6187;
       @include border-radius(0);
       background-color: $color-bg-filter-active;
       color: $white;
+
+      @include breakpoint($desktop) {
+        @include border-radius(20px);
+        background-color: $color-bg-filter-active;
+      }
     }
   }
 
