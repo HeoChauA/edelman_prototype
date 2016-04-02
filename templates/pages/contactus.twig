@@ -1,9 +1,9 @@
 
 {% extends '../layouts/layout.twig' %}
 
-{% block title %}FAQs{% endblock %}
+{% block title %}Contact Us{% endblock %}
 
-{% block page_heading %}FAQs{% endblock %}
+{% block page_heading %}Contact Us{% endblock %}
 
 {% block feature %}
   <div class="feature">
@@ -11,17 +11,16 @@
       <div class="page__title__wrap clearfix">
         <div class="page__title__image" style="background-image: url({{ post.thumbnail }})"> </div>
         <div class="page__title__container container">
-        <h1 class="page__title">FAQs</h1>
+        <h1 class="page__title">Contact Us</h1>
         </div>
       </div>
   {% endfor %}
-  {% include '../components/filter.twig' %}
   </div>
 {% endblock %}
 
 {% block content %}
   <div class="container">
-    {% include '../components/accordion.twig' %}
+    {% include "../components/contact.twig" %}
   </div>
 {% endblock %}
 

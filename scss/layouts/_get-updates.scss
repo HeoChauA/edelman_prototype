@@ -1,5 +1,5 @@
 .get-updates {
-  background-color: $white;
+  background-color: $bg-form;
   padding-bottom: rem(19px);
   padding-top: rem(38px);
 
@@ -98,7 +98,7 @@
           display: inline-block;
           margin-bottom: rem(10px);
           margin-left: rem(21px);
-          width: rem(349px);
+          width: rem(340px);
 
           &:first-of-type {
             margin-left: 0;
@@ -116,7 +116,7 @@
     .field-wrap  {
       input[type*="email"],
       input[type*="text"] {
-        background-color: $bg-page;
+        background-color: $white;
         border-color: $bd-form-color;
         border-style: solid;
         border-width: 0 0 1px 0;
@@ -126,6 +126,7 @@
         line-height: $base-line-height;
         padding: rem(26px 19px 23px);
         text-transform: uppercase;
+        width: 100%;
       }
     }
 
@@ -146,6 +147,7 @@
           background-color: transparent;
           border: none;
           padding: 0;
+          text-indent: rem(-99999px);
         }
 
         &:before,
@@ -176,6 +178,21 @@
           position: absolute;
           right: 0;
           text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.front {
+  .get-updates {
+    background-color: $white;
+
+    &-form {
+      .field-wrap  {
+        input[type*="email"],
+        input[type*="text"] {
+          background-color: $bg-form;
         }
       }
     }

@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
       activeHeader: "accordion__open icon-accordion icon-minus"
     };
 
-    $( ".js-accordion__content" ).accordion({
+    $( ".accordion" ).accordion({
       header: "> .accordion__group > h3",
       icons: $icons,
       heightStyle: "content",

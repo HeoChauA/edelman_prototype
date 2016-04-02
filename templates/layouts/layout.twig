@@ -9,21 +9,28 @@
       <link rel="stylesheet" href="css/style.css">
     {% endblock %}
   </head>
-  <body>
+  <body class="{{ body_class }}">
     <div class="page-wrapper">
       {% block header %}
         {% include 'header.twig' %}
       {% endblock %}
 
-      {% block feature %}{% endblock %}
-
       <section role="main" class="content-wrapper">
         <div class="wrapper ">
-        {% block content %}
-            <h1>{% block title %}{% endblock %}</h1>
-        {% endblock %}
+          <div class="content-wrapper ">
+            {% block feature %}{% endblock %}
+            <div id="content">
+              {% block content %}
+                <h1>{% block title %}{% endblock %}</h1>
+              {% endblock %}
+            </div>
+          </div>
         </div>
       </section>
+
+      {% block footerpanel %}
+        {% include '../components/form.twig' %}
+      {% endblock %}
     </div>
 
     {% block footer %}
@@ -43,7 +50,6 @@
       <script type='text/javascript' src='js/wrap-scripts.js'></script>
       <script type='text/javascript' src='js/skip-link-focus-fix.js'></script>
       <script type='text/javascript' src='js/dropdown.js'></script>
-      <script type='text/javascript' src='js/congscript.js'></script>
     {% endblock %}
   </body>
 </html>

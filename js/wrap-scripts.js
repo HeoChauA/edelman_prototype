@@ -4,15 +4,16 @@
     MenuResponsive();
     FilterClick();
     LoadMoreInit();
-    FaqHashCheckerInit();
+    //FaqHashCheckerInit();
     checkPageShort();
     checkDisclaimer();
     leaderShip();
+    mathheight();
+    filterLink();
 
     $(window).resize(function() {
       MenuResponsive();
       checkPageShort();
-
     });
   });
 
@@ -82,14 +83,13 @@
 
     filterLink.click(function(e) {
       e.preventDefault();
-      $('.form-title-search input').val('');
       accordiongroup.removeClass('filtered-show');
       accordiongroup.addClass('filtered-hide');
       $('.filtered-preview').removeClass('.fadeInDown');
 
       if($(this).parent().hasClass('all')) {
         e.preventDefault();
-        $('.filter__item  a').removeClass('selected');
+        $('.filter__item a').removeClass('selected');
         $(this).addClass('selected');
         accordiongroup.removeClass('filtered-hide');
       }
@@ -121,7 +121,7 @@
           }
         }
       });
-      newsPageLoad();
+      //newsPageLoad();
       //FAQ.checkNoResults();
     });
   }
@@ -247,6 +247,9 @@
     $('.dialog>div').height((height *.9)+'px');
   }
 
+  /**
+   * Filter by category Leadership
+  */
   function filterLeaderClick() {
     $('.filter--leader .filter__link').bind('click', function() {
       var $textSelected = $(this).text();
@@ -260,5 +263,37 @@
 
     var $filterLeaderSelected = $('.filter--leader .filter__link.selected');
     $filterLeaderSelected.trigger('click');
+  }
+
+  /**
+   * Filter by link target
+  */
+  function filterLink() {
+    $('.filter--link__target').click(function() {
+      var heightlink = $('.filter__title-bar').outerHeight(true);
+      var heightfilter = $('.filter--link').outerHeight(true);
+
+      var idlink = $(this).attr('href');
+      var idsplit = idlink.split("#");
+      var idblock = idsplit[1];
+
+      var topblock = $('#' + idblock).offset().top;
+      var toprespon = topblock - heightfilter + heightlink;
+
+      if (heightlink == 0) {
+        toprespon = topblock;
+      }
+
+      $("html, body").animate({ scrollTop: toprespon }, 500);
+      $('.filter').removeClass('filter--open');
+      return false;
+    });
+  }
+
+  /**
+   * Math Height
+  */
+  function mathheight() {
+    $('.box-grid .message, .box-grid .resources').matchHeight();
   }
 })(jQuery);

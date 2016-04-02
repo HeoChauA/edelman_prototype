@@ -115,3 +115,11 @@ $susy-media: (
     @include container($susy-superdesktop);
   }
 }
+
+#content {
+  .container {
+    @include susy-media(desktop) {
+      max-width: $container-in;
+    }
+  }
+}

@@ -6,10 +6,12 @@
       <nav id="site-navigation" class="main-navigation" role="navigation">
         <div class="menu-main-navigation-container">
           <ul id="primary-menu" class="menu">
-            <li><a href="index.html">Home</a></li>
+          {% for nav in prototype_nav|slice(3,10) %}
+            <li class="menu-item"><a href="{{ nav.link }}">{{ nav.name }}</a></li>
+          {% endfor %}
           </ul>
         </div>
       </nav><!-- #nav -->
-      <a class="button button--radius get-update" href="#updates">Get updates</a>
+      <!-- <a class="button button--radius get-update" href="#updates">Get updates</a> -->
     </div>
 {% endblock %}

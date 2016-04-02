@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>FFW Prototype - Index page</title>
+  <title>FFW Prototype - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="home front">
   <div class="page-wrapper">
     <header class="header">
       <div class="header-container container">
@@ -51,42 +51,155 @@
           <nav id="site-navigation" class="main-navigation" role="navigation">
             <div class="menu-main-navigation-container">
               <ul id="primary-menu" class="menu">
-                <li><a href="index.html">Home</a>
+                <li class="menu-item"><a href="keyfacts.html">Key Facts</a>
+                </li>
+                <li class="menu-item"><a href="faq.html">FAQ</a>
+                </li>
+                <li class="menu-item"><a href="performance.html">Perfomance</a>
+                </li>
+                <li class="menu-item"><a href="leadership.html">Leadership</a>
+                </li>
+                <li class="menu-item"><a href="latestupdates.html">Latest Updates</a>
+                </li>
+                <li class="menu-item"><a href="howtovote.html">How to vote</a>
                 </li>
               </ul>
             </div>
           </nav>
           <!-- #nav -->
-          <a class="button button--radius get-update" href="#updates">Get updates</a>
+          <!-- <a class="button button--radius get-update" href="#updates">Get updates</a> -->
         </div>
       </div>
     </header>
 
-    <div class="feature">
-      <div class="page__title__wrap clearfix">
-        <div class="page__title__image" style="background-image: url(images/header.png)"></div>
-        <div class="page__title__container container">
-          <h1 class="page__title">Post title</h1>
-        </div>
-      </div>
-    </div>
-
     <section role="main" class="content-wrapper">
       <div class="wrapper ">
-        <div class="container">
-          <ul class="list-icon">
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-            <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
-            </li>
-          </ul>
+        <div class="content-wrapper ">
+          <div id="content">
+            <div class="banner">
+              <div class="banner__image" style="background-image: url('images/header.png');"></div>
+              <div class="banner-container container">
+                <div class="banner__content">
+                  <h1 class="banner__heading title-big">leadership you can rely on</h1>
+                  <h2 class="banner__subheading">experience you can trust</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta">
+              <div class="cta__background">Ashford</div>
+              <div class="cta__container container">
+                <div class="cta__heading title-big">ashford prime is committed to long-term stockholder value.</div>
+                <div class="cta__subheading title-small">This website contains important information about Ashford Hospitality Primes 2016 Annual Meeting and the steps we continue to take to create and maximize value for all of our stockholders.</div>
+                <div class="cta__links">
+                  <div class="cta__link"><a class="cta__button button button--radius" href="#">Investor Presentation</a>
+                  </div>
+                  <div class="cta__link"><a class="cta__button button button--radius" href="#">Read The Open Letter</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-grid">
+              <div class="message">
+                <div class="box-grid__content box-grid--width">
+                  <div class="box-grid__title">
+                    <h2>leadership’s message</h2>
+                  </div>
+                  <div class="box-grid__body">
+                    <p>Our strategy is to invest primarily in full-service and urban select-service hotels which are anticipated to generate RevPAR of at least twice the then current U.S. average RevPAR. In addition, we may invest in upper upscale and luxury
+                      hotels situated in resort markets when those hotels meet our stated RevPAR criteria. We will seek to acquire both premium branded and independent hotels.</p>
+                  </div>
+                  <div class="box-grid__more">
+                    <a href="" class="button button--radius">explore more</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resources">
+                <div class="box-grid__content box-grid--width">
+                  <div class="box-grid__title">
+                    <h2>resources</h2>
+                  </div>
+                  <div class="box-grid__body">
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                  </div>
+                  <ul class="list-icon">
+                    <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
+                    </li>
+                    <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
+                    </li>
+                    <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
+                    </li>
+                    <li><a href="#">Vestibulum id ligula porta felis euismod semper</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="get-updates" id="updates">
+      <div class="get-updates__container container">
+        <h2 class="form__title title-big">Get Updates</h2>
+        <div class="form__description">
+          <p>Enter your email address to receive the latest facts, updates and materials from Ashford Hospitality Prime. You can unsubscribe at any time.</p>
+        </div>
+        <div class="form__fields">
+          <div id="nf-form-14-cont">
+            <span class="nf-form-title">
+                <h3></h3>
+              </span>
+            <div class="nf-form-wrap ninja-forms-form-wrap">
+              <div class="nf-form-layout">
+                <div class="get-updates-form">
+                  <div class="nf-fields ">
+                    <nf-fields-wrap>
+                      <div>
+                        <div class="nf-field">
+                          <div id="nf-field-984-wrap" class="field-wrap firstname-wrap label-hidden form__first-name" data-field-id="984">
+                            <input id="nf-field-984" name="nf-field-984" class="ninja-forms-field nf-element" type="text" value="" placeholder="First Name">
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="nf-field">
+                          <div id="nf-field-985-wrap" class="field-wrap lastname-wrap label-hidden form__last-name" data-field-id="985">
+                            <input id="nf-field-985" name="nf-field-985" class="ninja-forms-field nf-element" type="text" value="" placeholder="Last Name">
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="nf-field">
+                          <div id="nf-field-986-wrap" class="field-wrap email-wrap label-hidden form__email" data-field-id="986">
+                            <input id="nf-field-986" name="nf-field-986" class="ninja-forms-field nf-element" type="email" value="" placeholder="Email Address">
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="nf-field">
+                          <div id="nf-field-989-wrap" class="field-wrap submit-wrap label- form__submit" data-field-id="989">
+                            <input id="nf-field-989" class="nf-element " type="button" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </nf-fields-wrap>
+                  </div>
+                  <span class="nf-hp">
+                      <label for="nf-field-hp-14">
+                        If you are a human seeing this field, please leave it empty.
+                        <input id="nf-field-hp-14" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value="">
+                      </label>
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer id="footer" class="footer">
@@ -114,14 +227,15 @@
     <label for="index-link">Go to page</label>
     <nav>
 
-      <a href="index.html">Index</a>
-      <a href="home.html">Home</a>
-      <a href="thanhcomponent.html">Thanh Component</a>
-      <a href="congcomponent.html">Cong Component</a>
-      <a href="styleguide.html">Styleguide</a>
+      <a href="index.html">Home</a>
+      <a href="styleguide.html">Style Guide</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="keyfacts.html">Key Facts</a>
       <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="leadership.html">Leader ship</a>
+      <a href="performance.html">Perfomance</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="latestupdates.html">Latest Updates</a>
+      <a href="howtovote.html">How to vote</a>
     </nav>
   </div>
   <script src="js/lib/media.match.min.js"></script>
@@ -134,7 +248,7 @@
   <script type='text/javascript' src='js/wrap-scripts.js'></script>
   <script type='text/javascript' src='js/skip-link-focus-fix.js'></script>
   <script type='text/javascript' src='js/dropdown.js'></script>
-  <script type='text/javascript' src='js/congscript.js'></script>
+
 </body>
 
 </html>

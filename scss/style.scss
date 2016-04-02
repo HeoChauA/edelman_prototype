@@ -40,23 +40,21 @@
 @import 'helpers/helper';
 
 /* Layout for page */
-@import "layouts/banner";
-@import "layouts/cta";
-@import "layouts/footer";
-@import "layouts/get-updates";
-@import "layouts/header";
 @import "layouts/layout";
-@import "layouts/modal";
+@import "layouts/header";
+@import "layouts/footer";
 @import "layouts/navigation";
+@import "layouts/get-updates";
 @import "layouts/page";
 
 /* Import components */
+@import "layouts/banner";
+@import "layouts/modal";
+@import "layouts/cta";
 @import "layouts/news";
 @import "layouts/grid-content";
 @import "layouts/profile";
 @import "layouts/contact";
-
-// Component.
 @import 'layouts/accordion';
 @import 'layouts/filter';
 

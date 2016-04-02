@@ -1,0 +1,24 @@
+{% set ctas = [
+    {
+      'background_text': 'Ashford',
+      'heading': 'ashford prime is committed to long-term stockholder value.',
+      'subheading': 'This website contains important information about Ashford Hospitality Primes 2016 Annual Meeting and the steps we continue to take to create and maximize value for all of our stockholders.'
+    }
+  ]
+%}
+
+{% block ctas %}
+<div class="cta">
+  {% for cta in ctas %}
+  <div class="cta__background">{{ cta.background_text }}</div>
+  <div class="cta__container container">
+    <div class="cta__heading title-big">{{ cta.heading }}</div>
+    <div class="cta__subheading title-small">{{ cta.subheading }}</div>
+    <div class="cta__links">
+      <div class="cta__link"><a class="cta__button button button--radius" href="#">Investor Presentation</a></div>
+      <div class="cta__link"><a class="cta__button button button--radius" href="#">Read The Open Letter</a></div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

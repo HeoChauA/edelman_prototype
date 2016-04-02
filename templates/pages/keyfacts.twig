@@ -1,0 +1,39 @@
+
+{% extends '../layouts/layout.twig' %}
+
+{% block title %}Key Facts{% endblock %}
+
+{% block page_heading %}Key Facts{% endblock %}
+
+{% block feature %}
+  <div class="feature">
+  {% for post in posts %}
+    <div class="page__title__wrap clearfix">
+      <div class="page__title__image" style="background-image: url({{ post.thumbnail }})"> </div>
+      <div class="page__title__container container">
+      <h1 class="page__title">Key Facts</h1>
+      </div>
+    </div>
+  {% endfor %}
+  {% include "../components/filter-link.twig" %}
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div id="ashford">
+      <h2 class="accordion accordion__title">About Ashford Prime</h2>
+      {% include '../components/accordion.twig' %}
+    </div>
+    <div id="sessa">
+      <h2 class="accordion accordion__title">About Sessa</h2>
+      {% include '../components/accordion.twig' %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}

@@ -1,27 +1,18 @@
-
+{% set body_class = "home front" %}
 {% extends '../layouts/layout.twig' %}
 
-{% block title %}Index page{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block feature %}
-  {% for post in posts %}
-    <div class="feature">
-      <div class="page__title__wrap clearfix">
-        <div class="page__title__image" style="background-image: url({{ post.thumbnail }})"> </div>
-        <div class="page__title__container container">
-          <h1 class="page__title">{{post.title}}</h1>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-{% endblock %}
+{% block page_heading %}Home{% endblock %}
+
 {% block content %}
-<div class="container">
-	<ul class="list-icon">
-  <li><a href="#">Vestibulum id ligula porta felis euismod semper</a></li>
-  <li><a href="#">Vestibulum id ligula porta felis euismod semper</a></li>
-  <li><a href="#">Vestibulum id ligula porta felis euismod semper</a></li>
-  <li><a href="#">Vestibulum id ligula porta felis euismod semper</a></li>
-  </ul>
-</div>
+  {% include '../components/banner.twig' %}
+  {% include '../components/cta.twig' %}
+  {% include '../components/grid-content.twig' %}
 {% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}

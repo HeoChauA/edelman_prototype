@@ -1,0 +1,44 @@
+
+{% extends '../layouts/layout.twig' %}
+
+{% block title %}Performance{% endblock %}
+
+{% block page_heading %}Performance{% endblock %}
+
+{% block feature %}
+  <div class="feature">
+  {% for post in posts %}
+      <div class="page__title__wrap clearfix">
+        <div class="page__title__image" style="background-image: url({{ post.thumbnail }})"> </div>
+        <div class="page__title__container container">
+        <h1 class="page__title">Performance</h1>
+        </div>
+      </div>
+  {% endfor %}
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <p>Introduction will go here uctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+    <ul>
+      <li>RevPAR growth #1 amongst its peers in 2015</li>
+      <li>Exceeded its defined peers in total shareholder revenue in 2015 and outperformed the peer average by approximately 1,600 basis points</li>
+      <li>Built significant liquidity, with net working capital of approximately $169 million, as of December 31, 2015</li>
+      <li>Increased asset base by 50% since spin off </li>
+      <li>Increased portfolio RevPAR since spin-off by over 40% to $199 as of 12/31/15</li>
+      <li>Increased dividend by 100% since spin-off </li>
+    </ul>
+
+    <h2 class="title-big">Total Shareholder Return</h2>
+    <div class="chart">
+      <img src="images/chart.png" />
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}

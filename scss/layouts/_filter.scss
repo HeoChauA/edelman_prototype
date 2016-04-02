@@ -83,7 +83,11 @@ $color-border-filter-leader: rgba($white, .1);
     width: 100%;
 
     @include breakpoint($desktop) {
+      border: 0;
       display: none;
+      height: 0;
+      margin: 0;
+      padding: 0;
     }
 
     &:visited,
@@ -142,6 +146,56 @@ $color-border-filter-leader: rgba($white, .1);
             text-align: right;
           }
         }
+      }
+    }
+  }
+
+  &--link {
+    @include breakpoint($desktop) {
+      padding: 0;
+    }
+
+    &__target {
+      @include breakpoint($desktop) {
+        display: inline-block;
+        padding: rem(0 31px 0 28px);
+      }
+
+      &.selected,
+      &:hover {
+        @include breakpoint($desktop) {
+          @include border-radius(0);
+          background-color: transparent;
+        }
+      }
+
+      &:hover {
+        @include breakpoint($desktop) {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__item {
+      display: none;
+
+      @include breakpoint($desktop) {
+        display: inline-block !important;
+        margin-left: -3px;
+        margin-right: -3px;
+        padding: rem(19px 0 24px);
+        width: 50%;
+
+        &:first-of-type {
+          border-right: 1px solid $color-border-filter-leader;
+          text-align: right;
+        }
+      }
+    }
+
+    &.filter--open {
+      .filter--link__item {
+        display: block;
       }
     }
   }

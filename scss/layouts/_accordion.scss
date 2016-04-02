@@ -7,11 +7,6 @@ $width-icon: rem(24px);
 .accordion {
   margin-bottom: rem(73px);
 
-  @include breakpoint(desktop) {
-    padding-left: rem(105px);
-    padding-right: rem(105px);
-  }
-
   &__content {
     display: inline-block;
     width: 100%;
