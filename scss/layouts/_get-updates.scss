@@ -51,14 +51,15 @@
       margin: 0;
       max-width: 100%;
       padding: 0;
+      text-align: center;
     }
 
     @include breakpoint(desktop) {
       padding-bottom: rem(10px);
-      padding-right: rem(92px);
     }
 
     nf-fields-wrap {
+      margin: auto;
       > div {
         display: block;
         line-height: 0;
@@ -97,11 +98,17 @@
         @include breakpoint(desktop) {
           display: inline-block;
           margin-bottom: rem(10px);
-          margin-left: rem(21px);
-          width: rem(340px);
+          @include span(8 of 27 0.5);
+          float: none;
+          max-width: rem(340px);
 
           &:first-of-type {
             margin-left: 0;
+          }
+
+          &:last-child {
+            @include span(last 3 of 27 0.5);
+            float: none;
           }
 
           .field-wrap.nf-error {
@@ -132,42 +139,20 @@
 
     .form {
       &__submit {
-        &:before {
-          background-color: $prymary-color;
-          color: $white;
-          content: "\f00c";
-          font-family: 'fontawesome';
-          line-height: rem(70px);
-          text-align: center;
-        }
-
+        text-align: left;
         input[type*="button"] {
           @extend .button;
           @include border-radius(0);
-          background-color: transparent;
           border: none;
-          padding: 0;
-          text-indent: rem(-99999px);
-        }
-
-        &:before,
-        input[type*="button"] {
-          height: rem(70px);
-          position: absolute;
-          left: 0;
-          bottom: rem(40px);
+          font-size: rem(14px);
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: $base-line-height;
+          padding: rem(26px 19px 23px);
+          text-align: center;
           width: 100%;
-        }
-
-        @include breakpoint(desktop) {
-          &:before,
-          input[type*="button"] {
-            left: auto;
-            margin-right: rem(12px);
-            right: 0;
-            top: 0;
-            bottom: auto;
-            width: rem(80px);
+          @include breakpoint(desktop) {
+            width: auto;
           }
         }
 
@@ -184,6 +169,7 @@
   }
 }
 
+.home,
 .front {
   .get-updates {
     background-color: $white;

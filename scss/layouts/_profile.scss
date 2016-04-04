@@ -27,18 +27,25 @@ $gray-e2: #e2e2e2;
   }
 
   &__image {
+    line-height: 0;
     text-align: center;
 
     @include susy-media(tablet) {
       float: left;
     }
+    .field-img {
+      &:before {
+        display: none;
+      }
+    }
   }
 
   &__content {
-    padding-top: rem(28px);
+    padding: rem(28px 15px);
 
     @include susy-media(tablet) {
       margin-left: rem(320px);
+      padding: rem(28px 0);
     }
   }
 

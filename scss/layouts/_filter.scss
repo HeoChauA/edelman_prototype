@@ -65,10 +65,6 @@ $color-border-filter-leader: rgba($white, .1);
     @include breakpoint($desktop) {
       display: inline-block;
       width: auto;
-
-      &:first-of-type {
-        margin-left: rem(80px);
-      }
     }
   }
 
@@ -77,7 +73,7 @@ $color-border-filter-leader: rgba($white, .1);
     display: block;
     font-size: rem(14px);
     font-weight: 700;
-    padding: rem(15px 23px);
+    padding: rem(8px 23px);
     position: relative;
     text-transform: uppercase;
     width: 100%;
@@ -98,11 +94,19 @@ $color-border-filter-leader: rgba($white, .1);
     i {
       margin-top: rem(-12px);
       position: absolute;
-      right: rem(33px);
-      top: 50%;
+      left: rem(23px);
+      top: 57%;
+      width: rem(16px);
+      height: rem(16px);
 
       &:before {
         font-size: rem(16px);
+        border-bottom: .125rem solid #fff;
+        top: rem(7px);
+      }
+      &:after {
+        border-left: .125rem solid #fff;
+        left: rem(7px);
       }
     }
   }
@@ -198,5 +202,21 @@ $color-border-filter-leader: rgba($white, .1);
         display: block;
       }
     }
+  }
+}
+
+.filtered-preview {
+  &.hide {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: none !important;
+    padding: 0;
+  }
+
+  &.show {
+    height: inherit;
+    opacity: 1;
+    visibility: visible;
   }
 }
